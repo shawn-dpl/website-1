@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  align-items: center;
+  padding: 5px;
+  font-size: 1.2rem;
+  background-color: steelblue;
+  color: white;
+}
+
+.navbar > :first-child:hover {
+  cursor: pointer;
+  color: black;
+  opacity: 50;
+}
+
+.navbar > :nth-child(3) {
+  padding-right: 80%;
+}
+
+.navbar > :last-child:hover {
+  color: black;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+  gap: 5px;
+  background-color: skyblue;
+}
+
+.hero > :nth-child(1) {
+  justify-self: center;
+  text-decoration: underline;
+  font-size: 3rem;
+}
+.hero > :nth-child(3) {
+  /* display: flex; */
+  /* justify-content: start; */
+  text-align: center;
+}
+.hero > :nth-child(4) {
+  max-width: 70%;
+  justify-self: center;
+}
+.image-3 {
+  /* display: flex; */
+  justify-content: center;
+  padding-top: 8%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  align-items: center;
+  padding: 5px;
+  background-color: steelblue;
+}
+
+.footer > :nth-child(2) {
+  padding-left: 80%;
+}
