@@ -6,35 +6,37 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  height: 35px;
-  align-items: center;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: 15% 85%;
   font-size: 1.2rem;
   background-color: steelblue;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
 }
 
-.navbar > :first-child:hover {
+.navbar > .main-nav-links {
+  margin: 1%;
+}
+.navbar > .main-nav-links > :first-child:hover {
   cursor: pointer;
   color: black;
   opacity: 50;
 }
 
-.navbar > :nth-child(3) {
-  padding-right: 80%;
-}
-
-.navbar > :last-child:hover {
-  color: black;
+.navbar > .nav-hamburger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1%;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 100%;
-  gap: 5px;
+  width: 100%;
+  gap: 30px;
   background-color: skyblue;
 }
 
@@ -43,9 +45,15 @@ body {
   text-decoration: underline;
   font-size: 3rem;
 }
+
+.hero > :nth-child(2) {
+  /* display: flex; */
+  justify-content: center;
+  width: 70%;
+}
 .hero > :nth-child(3) {
   /* display: flex; */
-  /* justify-content: start; */
+  justify-content: center;
   text-align: center;
 }
 .hero > :nth-child(4) {
@@ -53,19 +61,46 @@ body {
   justify-self: center;
 }
 .image-3 {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   padding-top: 8%;
 }
+
 .footer {
-  display: flex;
-  justify-content: space-between;
-  height: 35px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  height: 6vh;
+  font-size: 0.9rem;
   align-items: center;
-  padding: 5px;
+  /* padding: 5px; */
   background-color: steelblue;
 }
 
-.footer > :nth-child(2) {
-  padding-left: 80%;
+.footer > .left-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1%;
+}
+
+.footer > .right-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer > .right-footer > :last-child {
+  margin: 0 1%;
+}
+
+@media all and (min-width: 320px) and (max-width: 600px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .hero > :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
 }
